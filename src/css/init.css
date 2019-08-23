@@ -1,0 +1,62 @@
+body,
+html {
+    margin : 0;
+    padding: 0;
+    width  : 100%
+}
+
+a,
+article,
+aside,
+b,
+button,
+div,
+footer,
+header,
+i,
+img,
+input,
+li,
+ol,
+p,
+s,
+section,
+select,
+span,
+u,
+ul {
+    margin : 0;
+    padding: 0
+}
+
+img {
+    display: block;
+    width  : 100%;
+}
+
+button,
+input,
+select {
+    outline: 0;
+    border : none;
+}
+
+button {
+    cursor          : pointer;
+    vertical-align  : top;
+    background-color: transparent;
+
+}
+
+button:active {
+    transform: scale(.98, .98);
+}
+
+.img-preload {
+    display: none;
+}
+
+.forbidden {
+    filter: grayscale(1);
+    cursor: not-allowed;
+}
