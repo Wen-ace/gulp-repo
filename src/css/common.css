@@ -60,3 +60,23 @@ button:active {
     filter: grayscale(1);
     cursor: not-allowed;
 }
+
+
+.alert {
+    display  : none;
+    position : fixed;
+    z-index  : 3;
+    top      : 0;
+    left     : 0;
+    font-size: 16px;
+    /* 这里建议换成 vw/rem 等自适应单位 */
+    line-height     : 2;
+    max-width       : 70%;
+    padding         : 0.5em 1em;
+    background-color: #ffeac5;
+    border-radius   : 6px;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%);
+    box-shadow      : 0 0 10px #999;
+}
