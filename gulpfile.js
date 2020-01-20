@@ -213,13 +213,6 @@ openBrowser();
 
 const { mockFn } = require('./httpMock');
 
-const fs = require('fs');
-const options = {
-    key: fs.readFileSync('E:/keys/.frp/server.key'),
-    cert: fs.readFileSync('E:/keys/.frp/server-2.crt')
-};
-
-
 function connect() {
     return gulpConnect.server({
         host: 'localhost',
@@ -236,7 +229,10 @@ function connect() {
                 ]
             },
         }),
-        ...(isHttps ? { https: options } : {})
+        ...(isHttps ? {
+            preferHttpl: true,
+            https: { allowHttpl: true }
+        } : {})
     })
 }
 function connect2() {
@@ -255,7 +251,10 @@ function connect2() {
                 ]
             },
         }),
-        ...(isHttps ? { https: options } : {})
+         ...(isHttps ? {
+            preferHttpl: true,
+            https: { allowHttpl: true }
+        } : {})
     })
 }
 
